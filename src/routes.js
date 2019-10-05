@@ -1,27 +1,9 @@
-/*!
-
-=========================================================
-* Light Bootstrap Dashboard React - v1.3.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
+import Application from "views/Application.jsx";
 import Dashboard from "views/Dashboard.jsx";
-import UserProfile from "views/UserProfile.jsx";
-import TableList from "views/TableList.jsx";
-import Typography from "views/Typography.jsx";
+import Teams from "views/Teams.jsx";
+import Admins from "views/Admins.jsx"
 import Icons from "views/Icons.jsx";
 import Maps from "views/Maps.jsx";
-import Notifications from "views/Notifications.jsx";
 import Upgrade from "views/Upgrade.jsx";
 
 const dashboardRoutes = [
@@ -33,31 +15,17 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/user",
-    name: "User Profile",
+    path: "/application",
+    name: "Application",
     icon: "pe-7s-user",
-    component: UserProfile,
+    component: Application,
     layout: "/admin"
   },
   {
-    path: "/table",
-    name: "Table List",
+    path: "/team",
+    name: "Teams",
     icon: "pe-7s-note2",
-    component: TableList,
-    layout: "/admin"
-  },
-  {
-    path: "/typography",
-    name: "Typography",
-    icon: "pe-7s-news-paper",
-    component: Typography,
-    layout: "/admin"
-  },
-  {
-    path: "/icons",
-    name: "Icons",
-    icon: "pe-7s-science",
-    component: Icons,
+    component: Teams,
     layout: "/admin"
   },
   {
@@ -68,17 +36,24 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/notifications",
-    name: "Notifications",
-    icon: "pe-7s-bell",
-    component: Notifications,
+    path: "/statistics",
+    name: "Admin",
+    icon: "pe-7s-news-paper",
+    component: Admins,
+    layout: "/admin"
+  },
+  {
+    path: "/icons",
+    name: "Icons",
+    icon: "pe-7s-science",
+    component: Icons,
     layout: "/admin"
   },
   {
     upgrade: true,
-    path: "/upgrade",
-    name: "Upgrade to PRO",
-    icon: "pe-7s-rocket",
+    path: "/login",
+    name: "Logout",
+    icon: "pe-7s-lock",
     component: Upgrade,
     layout: "/admin"
   }
